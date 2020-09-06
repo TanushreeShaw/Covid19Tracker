@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style5.css">
+
+<body>
+    <div class="container">
+        <a class="home" href="index.html">Home</a>
+        <div class="main-title">
+            <center>Covid-19 Tracker</center>
+        </div>
+        <div class="select-country">
+            <center>
+                <select class="country-name" id="country_name">
+                </select>
+            </center>
+        </div>
+        <div class="country-results">
+            <div class="box">
+                <p class="heading" style="color:purple">Confirmed Cases</p>
+
+                <p class="numbers" id="confirm">0</p>
+            </div>
+            <div class="box">
+                <p class="heading" style="color: green">Recovered Cases</p>
+                <p class="numbers" id="recover">0</p>
+            </div>
+            <div class="box">
+                <p class="heading" style="color: Red">Deaths Cases</p>
+                <p class="numbers" id="death">0</p>
+            </div>
+        </div>
+        <div class="country-results">
+            <div class="box">
+                <p class="heading" style="color:purple">New Confirmed</p>
+
+                <p class="numbers" id="newConfirm">0</p>
+            </div>
+            <div class="box">
+                <p class="heading" style="color: green">New Recovered</p>
+                <p class="numbers" id="newRecover">0</p>
+            </div>
+            <div class="box">
+                <p class="heading" style="color: Red">New Deaths</p>
+                <p class="numbers" id="newDeath">0</p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="Table">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-6ea85898-929e-43ce-bd77-b844ee270556"></div>
+    </div>
+
+    <h4> API used
+        <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest" target="_blank"><img src="Api.png" class="down" width="50" height="50"></a>
+    </h4>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script type="text/javascript" src="cr.js">
+    </script>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
